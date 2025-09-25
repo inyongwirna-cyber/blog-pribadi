@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Drakor Saya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">DramaKu</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Slideshow -->
+  <section id="home" class="slideshow">
+    <div class="slides fade">
+      <img src="p2.jfif" alt="Drama 1">
+      <div class="caption">Crash Landing on You</div>
+    </div>
+    <div class="slides fade">
+      <img src="p1.jfif" alt="Drama 2">
+      <div class="caption">Goblin</div>
+    </div>
+    <div class="slides fade">
+      <img src="p.jfif" alt="Drama 3">
+      <div class="caption">True Beauty</div>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="about" class="about">
+    <h2>Tentang Saya</h2>
+    <p>
+      Halo! Saya seorang siswa jurusan Rekayasa Perangkat Lunak yang suka menonton drama Korea.
+      Website ini saya buat sebagai blog pribadi untuk menuliskan review dan rekomendasi drama Korea favorit saya.
+    </p>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="blog">
+    <h2>Postingan Blog</h2>
+    <div class="blog-container">
+      <article class="card">
+        <img src="p2.jfif" alt="Drama">
+        <h3>Crash Landing on You</h3>
+        <p>Drama romantis tentang pertemuan dua dunia yang berbeda. Penuh ketegangan dan cinta.</p>
+      </article>
+      <article class="card">
+        <img src="p1.jfif" alt="Drama">
+        <h3>Goblin</h3>
+        <p>Sebuah kisah fantasi romantis yang menyentuh hati dengan karakter-karakter ikonik.</p>
+      </article>
+      <article class="card">
+        <img src="p.jfif" alt="Drama">
+        <h3>True Beauty</h3>
+        <p>Kisah seorang gadis SMA yang menemukan percaya diri melalui cinta dan persahabatan.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="contact">
+    <h2>Kontak Saya</h2>
+    <p>Email: <a href="mailto:dramakusaya@gmail.com">dramakusaya@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/">@dramakusaya</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 DramaKu. Dibuat dengan ❤ oleh Saya.</p>
+  </footer>
+
+  <!-- Script Slideshow -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 4000); // Ganti slide tiap 4 detik
+    }
+  </script>
+</body>
+</html>
